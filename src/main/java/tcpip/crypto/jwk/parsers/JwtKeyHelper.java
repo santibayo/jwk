@@ -49,12 +49,12 @@ public class JwtKeyHelper  {
 			return KeyFactory.getInstance(alg).generatePrivate(new RSAPrivateKeySpec(bim, bie));
 		} catch (InvalidKeySpecException e) {
 			JwtParserException jpe = new JwtParserException(e);
-			jpe.setCode(10101);
+			jpe.setCode(10103);
 			throw jpe;
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
 			JwtParserException jpe = new JwtParserException(e);
-			jpe.setCode(10102);
+			jpe.setCode(10104);
 			throw jpe;
 		}
 	}
